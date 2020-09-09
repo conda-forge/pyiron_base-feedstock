@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.1.8" %}
-{% set sha256 = "37ae7dd4808b1abdc94b96399a19492009d97e08807483e9f7554a401d679472" %}
+{% set version = "0.1.9" %}
+{% set sha256 = "a692ac8471cca13b745b5ece660c4f801b80479e02c62b6b5012f6e840e9a443" %}
 
 package:
   name: {{ name|lower }}
@@ -20,22 +20,30 @@ requirements:
   build:
     - python
     - pip
-
   run:
     - python
-    - h5py
-    - h5io
-    - matplotlib
-    - numpy
-    - pandas
-    - six
-    - sqlalchemy
-    - pathlib2
-    - pytables
+    - future >=0.17.1
+    - gitpython >=3.1.0
+    - git
+    - h5py >=2.10.0
+    - h5io >=0.1.1
+    - numpy >=1.18.1
+    - pandas >=1.0.1
+    - pathlib2 >=2.3.5
+    - psutil >=5.7.0
+    - pyfileindex >=0.0.4
+    - pysqa >=0.0.11
+    - six >=1.14.0
+    - sqlalchemy >=1.3.14
+    - pytables >=3.6.1
 
 test:
   imports:
     - pyiron_base
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/pyiron/pyiron_base
@@ -56,4 +64,4 @@ extra:
   recipe-maintainers:
     - pyiron-runner
     - jan-janssen
-    - sudarsan1989
+    - sudarsan-surendralal
