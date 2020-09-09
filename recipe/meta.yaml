@@ -51,7 +51,7 @@ about:
   home: https://github.com/pyiron/pyiron_base
   license: BSD-3-Clause
   license_family: BSD
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.txt'
+  license_file: 'LICENSE'
   summary: 'Core module for pyiron - an integrated development environment (IDE) for computational materials science.'
   description: |
     pyiron was initially developed in the Computational Materials Design department of Joerg Neugebauer at the
