@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.1.8" %}
-{% set sha256 = "37ae7dd4808b1abdc94b96399a19492009d97e08807483e9f7554a401d679472" %}
+{% set version = "0.1.9" %}
+{% set sha256 = "a692ac8471cca13b745b5ece660c4f801b80479e02c62b6b5012f6e840e9a443" %}
 
 package:
   name: {{ name|lower }}
@@ -36,6 +36,10 @@ requirements:
 test:
   imports:
     - pyiron_base
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/pyiron/pyiron_base
