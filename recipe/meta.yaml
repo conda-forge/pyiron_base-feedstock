@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - pyiron = pyiron_base.cli:main
@@ -39,7 +39,7 @@ requirements:
     - six >=1.14.0
     - sqlalchemy >=1.3.14
     - pytables >=3.6.1
-    - tqdm >=4.35.0,<4.52.0
+    - tqdm >=4.35.0
 
 test:
   imports:
