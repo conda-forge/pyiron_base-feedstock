@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.1.36" %}
-{% set sha256 = "57da0b34ea7b494bd1c67b5f60256d745101b26f14e45070b58c8f4396a9ea21" %}
+{% set version = "0.1.37" %}
+{% set sha256 = "9bfe01f783b4f9bbe2b21b4270135abf1f59e2f4261e8e0aedfb2f6b799fbd6b" %}
 
 package:
   name: {{ name|lower }}
@@ -68,4 +68,6 @@ extra:
   recipe-maintainers:
     - pyiron-runner
     - jan-janssen
-    - sudarsan-surendralal
+    - pmrv
+    - muh-hassani
+    - niklassiemer
