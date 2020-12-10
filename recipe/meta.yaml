@@ -28,7 +28,7 @@ requirements:
     - future >=0.17.1
     - gitpython >=3.1.0
     - git
-    - h5py >=2.10.0
+    - h5py ==2.09.0
     - h5io >=0.1.1
     - numpy >=1.18.1
     - pandas >=1.0.1
