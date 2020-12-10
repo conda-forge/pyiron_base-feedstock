@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.1.38" %}
-{% set sha256 = "90793ce69a029d99b37c71e8deb17934d0f94435e0d6af4ce2934a76afd75e29" %}
+{% set version = "0.1.39" %}
+{% set sha256 = "85de3837e6ba09507720de7651703d0c8e51aa8a1675b676e06d815dfbf7ce64" %}
 
 package:
   name: {{ name|lower }}
@@ -28,7 +28,7 @@ requirements:
     - future >=0.17.1
     - gitpython >=3.1.0
     - git
-    - h5py >=2.10.0
+    - h5py >=2.09.0
     - h5io >=0.1.1
     - numpy >=1.18.1
     - pandas >=1.0.1
