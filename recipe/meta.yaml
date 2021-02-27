@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyiron = pyiron_base.cli:main
@@ -29,7 +29,7 @@ requirements:
     - gitpython >=3.1.13
     - git
     - h5io >=0.1.1
-    - h5py >=3.1.0
+    - h5py >=2.10.0  # >=3.1.0
     - numpy >=1.16  # >=1.20.1
     - pandas >=1.2.2
     - pathlib2 >=2.3.5
