@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.2.5" %}
-{% set sha256 = "cca875f24292d43c4df7c14015e28673f485b033b57e7a29bd7bb1156819ab15" %}
+{% set version = "0.2.6" %}
+{% set sha256 = "64be6b9cb49d1d7ad5e346b1598e5b7c748508460b3d7b9308c7a17b76915286" %}
 
 package:
   name: {{ name|lower }}
@@ -36,7 +36,7 @@ requirements:
     - psutil >=5.8.0
     - pyfileindex >=0.0.6
     - pysqa >=0.0.15
-    - sqlalchemy >=1.4.1
+    - sqlalchemy >=1.4.2
     - pytables >=3.6.1
     - tqdm >=4.59.0
 
