@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.2.12" %}
-{% set sha256 = "49f92e64254dbdcc763b88992be7c32d625b52db63967f96e3c770d155ca0170" %}
+{% set version = "0.2.13" %}
+{% set sha256 = "efad1fab683022fd85412864b9284c104c0715cf27bb1c9a5e0573b3fe452843" %}
 
 package:
   name: {{ name|lower }}
@@ -26,17 +26,17 @@ requirements:
     - python >=3.5
     - dill >=0.3.3
     - future >=0.18.2
-    - gitpython >=3.1.14
+    - gitpython >=3.1.17
     - git
     - h5io >=0.1.2
     - h5py >=3.2.1
-    - numpy >=1.20.2
+    - numpy >=1.20.3
     - pandas >=1.2.4
     - pathlib2 >=2.3.5
     - psutil >=5.8.0
     - pyfileindex >=0.0.6
     - pysqa >=0.0.15
-    - sqlalchemy >=1.4.12
+    - sqlalchemy >=1.4.15
     - pytables >=3.6.1
     - tqdm >=4.60.0
 
