@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.2.15" %}
-{% set sha256 = "3f75d3cab5b26123b8804cec4f944d0722ae93fe75e99bd38b274d36691c1aab" %}
+{% set version = "0.2.16" %}
+{% set sha256 = "03d568f76bc031695cee4d1ebfe5fef3c46eecdef7ddf9447f75a2f16f9082d0" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyiron = pyiron_base.cli:main
@@ -24,7 +24,7 @@ requirements:
     - pip
   run:
     - python >=3.5
-    - dill >=0.3.3
+    - dill >=0.3.4
     - future >=0.18.2
     - gitpython >=3.1.17
     - git
@@ -38,7 +38,7 @@ requirements:
     - pysqa >=0.0.15
     - sqlalchemy >=1.4.17
     - pytables >=3.6.1
-    - tqdm >=4.61.0
+    - tqdm >=4.61.1
 
 test:
   imports:
