@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.2.23" %}
-{% set sha256 = "815ce72c0d20504aad4af1d95910cf62dab17773045bb71c78b802a130d2e222" %}
+{% set version = "0.2.24" %}
+{% set sha256 = "21a42b4c8baa050b98968323f14f05848dc18d8b0a462229d6cc3525fbfb02ae" %}
 
 package:
   name: {{ name|lower }}
@@ -30,15 +30,15 @@ requirements:
     - git
     - h5io >=0.1.2
     - h5py >=3.3.0
-    - numpy >=1.21.1
-    - pandas >=1.3.1
+    - numpy >=1.21.2
+    - pandas >=1.3.2
     - pathlib2 >=2.3.6
     - psutil >=5.8.0
     - pyfileindex >=0.0.6
     - pysqa >=0.0.15
     - sqlalchemy >=1.4.22
     - pytables >=3.6.1
-    - tqdm >=4.62.0
+    - tqdm >=4.62.1
 
 test:
   imports:
