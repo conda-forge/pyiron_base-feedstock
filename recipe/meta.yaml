@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.4.1" %}
-{% set sha256 = "0991b2dc3b6cd1ca97a2f1952cf4382725dc2a7703afcb4b83ae46c99fd09511" %}
+{% set version = "0.4.2" %}
+{% set sha256 = "68f7d36fc29bd589148434ab604b5398d08c2df9a762278a74fa8f4f679ab5b0" %}
 
 package:
   name: {{ name|lower }}
@@ -20,10 +20,10 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
   run:
-    - python >=3.5
+    - python >=3.6
     - dill >=0.3.4
     - future >=0.18.2
     - gitpython >=3.1.24
