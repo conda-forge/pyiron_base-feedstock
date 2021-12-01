@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.4.2" %}
-{% set sha256 = "68f7d36fc29bd589148434ab604b5398d08c2df9a762278a74fa8f4f679ab5b0" %}
+{% set version = "0.4.3" %}
+{% set sha256 = "aba10765daa191b8b0dd508c89ddbe00c2220621922cb38e1bc0a822ad1d834f" %}
 
 package:
   name: {{ name|lower }}
@@ -13,17 +13,17 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyiron = pyiron_base.cli:main
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - dill >=0.3.4
     - future >=0.18.2
     - gitpython >=3.1.24
