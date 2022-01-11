@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.4.5" %}
-{% set sha256 = "ef894ec320924bb1d57c50ad025cfdc10f548f308d1ab8e0748cffcadaee8aec" %}
+{% set version = "0.5.0" %}
+{% set sha256 = "7757d928d9fb9e2be6ba6a2b8c94b2fc3a8f0fa0e2740c387626ffbf029f1d29" %}
 
 package:
   name: {{ name|lower }}
@@ -20,13 +20,13 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
+    - python >=3.8
     - dill >=0.3.4
     - future >=0.18.2
-    - gitpython >=3.1.24
+    - gitpython >=3.1.25
     - git
     - h5io >=0.1.4
     - h5py >=2.10.0  # for tensorflow compatibility
@@ -34,13 +34,12 @@ requirements:
     - pandas >=1.3.5
     - pathlib2 >=2.3.6
     - pint >=0.18
-    - psutil >=5.8.0
+    - psutil >=5.9.0
     - pyfileindex >=0.0.6
     - pysqa >=0.0.15
-    - sqlalchemy >=1.4.28
+    - sqlalchemy >=1.4.29
     - pytables >=3.6.1
     - tqdm >=4.62.3
-    - typing_extensions >=4.0.1
 
 test:
   imports:
