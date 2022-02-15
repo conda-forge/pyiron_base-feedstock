@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.5.4" %}
-{% set sha256 = "80c898023b9754a29c41a941b572b5747d2d931aa110fcb71d29d6104433f604" %}
+{% set version = "0.5.5" %}
+{% set sha256 = "4281e0b8998fb36ad1cd9498133f22d726b35cc4fcc82e4bb544543a24b57d5c" %}
 
 package:
   name: {{ name|lower }}
@@ -10,12 +10,11 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - filesize.patch
+
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyiron = pyiron_base.cli:main
@@ -33,8 +32,8 @@ requirements:
     - h5io >=0.1.7
     - h5py >=2.10.0  # for tensorflow compatibility
     - numpy >=1.19.5  # for numba and pytorch compatibility
-    - pandas >=1.4.0
-    - pathlib2 >=2.3.6
+    - pandas >=1.4.1
+    - pathlib2 >=2.3.7.post1
     - pint >=0.18
     - psutil >=5.9.0
     - pyfileindex >=0.0.6
