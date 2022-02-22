@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.5.5" %}
-{% set sha256 = "4281e0b8998fb36ad1cd9498133f22d726b35cc4fcc82e4bb544543a24b57d5c" %}
+{% set version = "0.5.6" %}
+{% set sha256 = "251d9c538a2d82feceddb336692019daabfd5711e61438ffd05c20ded36a55c2" %}
 
 package:
   name: {{ name|lower }}
@@ -27,7 +27,7 @@ requirements:
     - python >=3.8
     - dill >=0.3.4
     - future >=0.18.2
-    - gitpython >=3.1.26
+    - gitpython >=3.1.27
     - git
     - h5io >=0.1.7
     - h5py >=2.10.0  # for tensorflow compatibility
