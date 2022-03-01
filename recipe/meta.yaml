@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.5.6" %}
-{% set sha256 = "251d9c538a2d82feceddb336692019daabfd5711e61438ffd05c20ded36a55c2" %}
+{% set version = "0.5.7" %}
+{% set sha256 = "17e86954e6c1888f86c10004c63761e06eb50f6ac4d210bca2939994b487b10c" %}
 
 package:
   name: {{ name|lower }}
@@ -40,7 +40,7 @@ requirements:
     - pysqa >=0.0.16
     - sqlalchemy >=1.4.31
     - pytables >=3.7.0
-    - tqdm >=4.62.3
+    - tqdm >=4.63.0
 
 test:
   imports:
