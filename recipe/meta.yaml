@@ -14,7 +14,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyiron = pyiron_base.cli:main
@@ -39,7 +39,7 @@ requirements:
     - pyfileindex >=0.0.6
     - pysqa >=0.0.16
     - sqlalchemy >=1.4.31
-    - pytables >=3.7.0
+    - pytables >=3.6.1 # for fenics compatibility
     - tqdm >=4.63.0
 
 test:
