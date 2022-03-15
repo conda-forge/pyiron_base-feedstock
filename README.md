@@ -5,7 +5,7 @@ Home: https://github.com/pyiron/pyiron_base
 
 Package license: BSD-3-Clause
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyiron_base-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyiron_base-feedstock/blob/main/LICENSE.txt)
 
 Summary: Core module for pyiron - an integrated development environment (IDE) for computational materials science.
 
@@ -26,8 +26,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4583&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyiron_base-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4583&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyiron_base-feedstock?branchName=main">
       </a>
     </td>
   </tr>
