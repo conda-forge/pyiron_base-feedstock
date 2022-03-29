@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.5.8" %}
-{% set sha256 = "1d122cf2c325fef5c9622b913285ade3b2b84e820e709197e47735e85c2910e4" %}
+{% set version = "0.5.9" %}
+{% set sha256 = "71572074587603a10cb297a0d10de210824c702283887911336308332a581c45" %}
 
 package:
   name: {{ name|lower }}
@@ -40,7 +40,7 @@ requirements:
     - pysqa >=0.0.16
     - sqlalchemy >=1.4.31
     - pytables >=3.6.1 # for fenics compatibility
-    - tqdm >=4.63.0
+    - tqdm >=4.63.1
 
 test:
   imports:
