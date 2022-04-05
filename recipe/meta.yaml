@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.5.9" %}
-{% set sha256 = "71572074587603a10cb297a0d10de210824c702283887911336308332a581c45" %}
+{% set version = "0.5.10" %}
+{% set sha256 = "99531629a6e3400ceec7977f8ababb08df864e97e21b4e6c14f06afcfd84c0c5" %}
 
 package:
   name: {{ name|lower }}
@@ -32,15 +32,15 @@ requirements:
     - h5io >=0.1.7
     - h5py >=2.10.0  # for tensorflow compatibility
     - numpy >=1.19.5  # for numba and pytorch compatibility
-    - pandas >=1.4.1
+    - pandas >=1.4.2
     - pathlib2 >=2.3.7.post1
     - pint >=0.18
     - psutil >=5.9.0
     - pyfileindex >=0.0.6
     - pysqa >=0.0.16
-    - sqlalchemy >=1.4.31
+    - sqlalchemy >=1.4.34
     - pytables >=3.6.1 # for fenics compatibility
-    - tqdm >=4.63.1
+    - tqdm >=4.64.0
 
 test:
   imports:
