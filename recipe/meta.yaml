@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.5.10" %}
-{% set sha256 = "99531629a6e3400ceec7977f8ababb08df864e97e21b4e6c14f06afcfd84c0c5" %}
+{% set version = "0.5.11" %}
+{% set sha256 = "1cfc50c2e09757894dc01f7e7678c930c49993a80c903155dddf63b6df1cd040" %}
 
 package:
   name: {{ name|lower }}
@@ -34,11 +34,11 @@ requirements:
     - numpy >=1.19.5  # for numba and pytorch compatibility
     - pandas >=1.4.2
     - pathlib2 >=2.3.7.post1
-    - pint >=0.18
+    - pint >=0.19.1
     - psutil >=5.9.0
     - pyfileindex >=0.0.6
     - pysqa >=0.0.16
-    - sqlalchemy >=1.4.34
+    - sqlalchemy >=1.4.35
     - pytables >=3.6.1 # for fenics compatibility
     - tqdm >=4.64.0
 
