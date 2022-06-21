@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.5.13" %}
-{% set sha256 = "cce2331dba2a050e497b2487b81ed74484c30c2a9a2f39c2eb613ae1afb8f88f" %}
+{% set version = "0.5.14" %}
+{% set sha256 = "585e49caa26cfcd37e8b7764ebf80d1b12106cb87213e4a69425e81c460027a9" %}
 
 package:
   name: {{ name|lower }}
@@ -25,7 +25,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - dill >=0.3.4
+    - dill >=0.3.5.1
     - future >=0.18.2
     - gitpython >=3.1.27
     - git
@@ -34,11 +34,11 @@ requirements:
     - numpy >=1.19.5  # for numba and pytorch compatibility
     - pandas >=1.4.2
     - pathlib2 >=2.3.7.post1
-    - pint >=0.19.1
-    - psutil >=5.9.0
+    - pint >=0.19.2
+    - psutil >=5.9.1
     - pyfileindex >=0.0.6
     - pysqa >=0.0.16
-    - sqlalchemy >=1.4.35
+    - sqlalchemy >=1.4.37
     - pytables >=3.6.1 # for fenics compatibility
     - tqdm >=4.64.0
 
