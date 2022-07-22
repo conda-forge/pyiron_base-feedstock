@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
   patches:
     - import.patch
-
+    - filedata.patch
 
 build:
   noarch: python
