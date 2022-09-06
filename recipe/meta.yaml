@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.5.22" %}
-{% set sha256 = "ee8360397b139397f260cc4af74a4f19804f4f7b2f3d7e9a37e7c67e61976903" %}
+{% set version = "0.5.23" %}
+{% set sha256 = "5a36a1d635f128a6af6d80bbf75d2b4ab45ea26c49d89a82984aa5714fffc258" %}
 
 package:
   name: {{ name|lower }}
@@ -35,12 +35,12 @@ requirements:
     - pandas >=1.4.2
     - pathlib2 >=2.3.7.post1
     - pint >=0.19.2
-    - psutil >=5.9.1
+    - psutil >=5.9.2
     - pyfileindex >=0.0.6
     - pysqa >=0.0.16
     - sqlalchemy >=1.4.40
     - pytables >=3.6.1 # for fenics compatibility
-    - tqdm >=4.64.0
+    - tqdm >=4.64.1
 
 test:
   imports:
@@ -71,5 +71,4 @@ extra:
     - pyiron-runner
     - jan-janssen
     - pmrv
-    - muh-hassani
     - niklassiemer
