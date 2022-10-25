@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.5.26" %}
-{% set sha256 = "32574db100520d9eef1099ac190546458d1b7f6ac2bc095fb5adc9b7988d5af1" %}
+{% set version = "0.5.27" %}
+{% set sha256 = "1b83a21f16a9871e5db43f74dfc0e6c9fe727ea8e40e7a4557ed24c37c295cfb" %}
 
 package:
   name: {{ name|lower }}
@@ -25,19 +25,19 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - dill >=0.3.5.1
+    - dill >=0.3.6
     - future >=0.18.2
-    - gitpython >=3.1.28
+    - gitpython >=3.1.29
     - git
     - h5io >=0.1.7
     - h5py >=2.10.0  # for tensorflow compatibility
     - numpy >=1.19.5  # for numba and pytorch compatibility
-    - pandas >=1.5.0
+    - pandas >=1.5.1
     - pathlib2 >=2.3.7.post1
     - pint >=0.19.2
-    - psutil >=5.9.2
-    - pyfileindex >=0.0.6
-    - pysqa >=0.0.16
+    - psutil >=5.9.3
+    - pyfileindex >=0.0.7
+    - pysqa >=0.0.17
     - sqlalchemy >=1.4.41
     - pytables >=3.6.1 # for fenics compatibility
     - tqdm >=4.64.1
