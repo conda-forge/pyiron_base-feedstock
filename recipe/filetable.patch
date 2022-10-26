@@ -1,0 +1,22 @@
+From 9b07afcfc2068539fdcc192c576825799c5da957 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Tue, 25 Oct 2022 17:26:59 -0600
+Subject: [PATCH] Filetable ignore broken HDF5 files
+
+---
+ pyiron_base/database/filetable.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pyiron_base/database/filetable.py b/pyiron_base/database/filetable.py
+index 9cb2a1d42..26fbbf287 100644
+--- a/pyiron_base/database/filetable.py
++++ b/pyiron_base/database/filetable.py
+@@ -62,7 +62,7 @@ def init_table(self, fileindex, working_dir_lst=None):
+         for path, mtime in zip(fileindex.path, fileindex.mtime):
+             try:  # Ignore HDF5 files which are not created by pyiron
+                 job_dict = self.get_extract(path, mtime)
+-            except ValueError:
++            except (ValueError, OSError):
+                 pass
+             else:
+                 job_dict["id"] = len(working_dir_lst) + 1
