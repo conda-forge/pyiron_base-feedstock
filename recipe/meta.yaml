@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.5.27" %}
-{% set sha256 = "1b83a21f16a9871e5db43f74dfc0e6c9fe727ea8e40e7a4557ed24c37c295cfb" %}
+{% set version = "0.5.28" %}
+{% set sha256 = "c81ad62a30997d06a5483add781b1be75880fdff50a854e5cbad13095ba1ece4" %}
 
 package:
   name: {{ name|lower }}
@@ -10,13 +10,10 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - filetable.patch
-
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyiron = pyiron_base.cli:main
@@ -40,9 +37,10 @@ requirements:
     - psutil >=5.9.3
     - pyfileindex >=0.0.7
     - pysqa >=0.0.17
-    - sqlalchemy >=1.4.41
+    - sqlalchemy >=1.4.42
     - pytables >=3.6.1 # for fenics compatibility
     - tqdm >=4.64.1
+    - traitlets >=5.5.0
 
 test:
   imports:
