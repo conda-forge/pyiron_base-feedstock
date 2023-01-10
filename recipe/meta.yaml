@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.5.30" %}
-{% set sha256 = "9853bc2ab757657aeee1aef2a316d5822c208a535644deb3dbc4f4dd7b61adaf" %}
+{% set version = "0.5.31" %}
+{% set sha256 = "a366f5e26260bd053fd76f337fc7885ad5b381a6e05face50c247de0a86353cd" %}
 
 package:
   name: {{ name|lower }}
@@ -10,12 +10,10 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - flexiblemaster.patch
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyiron = pyiron_base.cli:main
@@ -28,7 +26,7 @@ requirements:
     - python >=3.8
     - dill >=0.3.6
     - future >=0.18.2
-    - gitpython >=3.1.29
+    - gitpython >=3.1.30
     - git
     - h5io >=0.1.7
     - h5py >=2.10.0  # for tensorflow compatibility
@@ -39,10 +37,10 @@ requirements:
     - psutil >=5.9.4
     - pyfileindex >=0.0.7
     - pysqa >=0.0.17
-    - sqlalchemy >=1.4.44
+    - sqlalchemy >=1.4.46
     - pytables >=3.6.1 # for fenics compatibility
     - tqdm >=4.64.1
-    - traitlets >=5.5.0
+    - traitlets >=5.8.0
 
 test:
   imports:
