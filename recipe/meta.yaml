@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyiron = pyiron_base.cli:main
@@ -37,7 +37,7 @@ requirements:
     - psutil >=5.9.4
     - pyfileindex >=0.0.7
     - pysqa >=0.0.18
-    - sqlalchemy >=2.0.0
+    - sqlalchemy >=1.4.46  # mendeleev requires <2.0.0
     - pytables >=3.6.1 # for fenics compatibility
     - tqdm >=4.64.1
     - traitlets >=5.8.1
