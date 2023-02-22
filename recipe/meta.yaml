@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.5.32" %}
-{% set sha256 = "4f1548846c2719a3913eb3cc5994f56e69525f94b61fd4f469eb0b526f69937a" %}
+{% set version = "0.5.33" %}
+{% set sha256 = "851701c1865870568656bfd45dc412c56fea3806ce67971652e0e4ac09dc563c" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyiron = pyiron_base.cli:main
@@ -25,8 +25,8 @@ requirements:
   run:
     - python >=3.8
     - dill >=0.3.6
-    - future >=0.18.2
-    - gitpython >=3.1.30
+    - future >=0.18.3
+    - gitpython >=3.1.31
     - git
     - h5io >=0.1.7
     - h5py >=2.10.0  # for tensorflow compatibility
@@ -40,7 +40,7 @@ requirements:
     - sqlalchemy >=1.4.46  # mendeleev requires <2.0.0
     - pytables >=3.6.1 # for fenics compatibility
     - tqdm >=4.64.1
-    - traitlets >=5.8.1
+    - traitlets >=5.9.0
 
 test:
   imports:
