@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.5.33" %}
-{% set sha256 = "851701c1865870568656bfd45dc412c56fea3806ce67971652e0e4ac09dc563c" %}
+{% set version = "0.5.34" %}
+{% set sha256 = "c5a3fdb61b90b6d6204c85ec9d1f984c6913847900ee7e019e248e7bdf8565c4" %}
 
 package:
   name: {{ name|lower }}
@@ -39,7 +39,7 @@ requirements:
     - pysqa >=0.0.18
     - sqlalchemy >=1.4.46  # mendeleev requires <2.0.0
     - pytables >=3.6.1 # for fenics compatibility
-    - tqdm >=4.64.1
+    - tqdm >=4.65.0
     - traitlets >=5.9.0
 
 test:
