@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.5.36" %}
-{% set sha256 = "bbe4b07c100e990789a9e50f18138b5f51f4a9c078f925dec7fdb628d11b568b" %}
+{% set version = "0.5.37" %}
+{% set sha256 = "4b338686089b57999865541018da905753be59304a7b0e6157d965140f9546e6" %}
 
 package:
   name: {{ name|lower }}
@@ -34,10 +34,10 @@ requirements:
     - pandas >=2.0.0
     - pathlib2 >=2.3.7.post1
     - pint >=0.20.1
-    - psutil >=5.9.4
+    - psutil >=5.9.5
     - pyfileindex >=0.0.7
-    - pysqa >=0.0.19
-    - sqlalchemy >=2.0.9
+    - pysqa >=0.0.20
+    - sqlalchemy >=2.0.10
     - pytables >=3.6.1 # for fenics compatibility
     - tqdm >=4.65.0
     - traitlets >=5.9.0
