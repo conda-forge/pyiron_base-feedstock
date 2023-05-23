@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.5.38" %}
-{% set sha256 = "709939a0cb29a8c693e5a14571df87718faa29b3da7208920ce0662334ef8ec7" %}
+{% set version = "0.5.39" %}
+{% set sha256 = "b61ec1ac614eff6e77b8ffb5fcca5e77c5ca3da69adc5746bd5a740e28cf0a68" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyiron = pyiron_base.cli:main
@@ -37,7 +37,7 @@ requirements:
     - psutil >=5.9.5
     - pyfileindex >=0.0.11
     - pysqa >=0.0.24
-    - sqlalchemy >=2.0.13
+    - sqlalchemy >=2.0.15
     - pytables >=3.6.1 # for fenics compatibility
     - tqdm >=4.65.0
     - traitlets >=5.9.0
