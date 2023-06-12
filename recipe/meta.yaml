@@ -20,10 +20,10 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python >=3.8
     - pip
   run:
-    - python >=3.9
+    - python >=3.8
     - dill >=0.3.6
     - future >=0.18.3
     - gitpython >=3.1.31
@@ -33,11 +33,11 @@ requirements:
     - numpy >=1.19.5  # for numba and pytorch compatibility
     - pandas >=2.0.2
     - pathlib2 >=2.3.7.post1
-    - pint >=0.21
+    - pint >=0.21  # for backwards compatibility to python 3.8
     - psutil >=5.9.5
     - pyfileindex >=0.0.11
-    - pysqa >=0.0.24
-    - sqlalchemy >=2.0.15
+    - pysqa >=0.0.25
+    - sqlalchemy >=2.0.16
     - pytables >=3.6.1 # for fenics compatibility
     - tqdm >=4.65.0
     - traitlets >=5.9.0
