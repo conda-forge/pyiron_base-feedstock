@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.6.1" %}
-{% set sha256 = "6114e9df101410bc3effee9bb6cfc5f3f9403af01adf26fb0ce2b935e3fa4d3f" %}
+{% set version = "0.6.1.dev0" %}
+{% set sha256 = "6ee3ea539ce051b93aad90d4a08dfadd1a79fba07467da3546c906963e644c39" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyiron = pyiron_base.cli:main
