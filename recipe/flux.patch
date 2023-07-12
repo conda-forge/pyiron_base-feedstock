@@ -1,0 +1,58 @@
+From 64d5a62063fe5bcd611c3e8fb3417a5b6a17e22a Mon Sep 17 00:00:00 2001
+From: Jan Janssen <janssen@lanl.gov>
+Date: Wed, 12 Jul 2023 11:05:39 -0600
+Subject: [PATCH] Bug fixes for flux
+
+---
+ pyiron_base/jobs/job/extension/server/generic.py | 3 +++
+ pyiron_base/jobs/job/runfunction.py              | 6 +++---
+ 2 files changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/pyiron_base/jobs/job/extension/server/generic.py b/pyiron_base/jobs/job/extension/server/generic.py
+index 2c763942f..7864d7974 100644
+--- a/pyiron_base/jobs/job/extension/server/generic.py
++++ b/pyiron_base/jobs/job/extension/server/generic.py
+@@ -12,6 +12,7 @@
+ from typing import Union
+ 
+ from pyiron_base.state import state
++from pyiron_base.utils.instance import static_isinstance
+ from pyiron_base.jobs.job.extension.server.runmode import Runmode
+ 
+ __author__ = "Jan Janssen"
+@@ -476,6 +477,8 @@ def executor(self, exe: Union[Executor, None]):
+         """
+         if isinstance(exe, Executor):
+             self.run_mode.executor = True
++        elif static_isinstance(exe, "flux.job.executor.FluxExecutor"):
++            self.run_mode.executor = True
+         elif exe is None and self.run_mode.executor:
+             self.run_mode.modal = True
+         elif exe is not None:
+diff --git a/pyiron_base/jobs/job/runfunction.py b/pyiron_base/jobs/job/runfunction.py
+index b27060e37..ee34c8bef 100644
+--- a/pyiron_base/jobs/job/runfunction.py
++++ b/pyiron_base/jobs/job/runfunction.py
+@@ -494,11 +494,11 @@ def run_job_with_runmode_executor(job, executor, gpus_per_slot=None):
+             "Currently job.server.run_mode.executor does not support GenericMaster jobs."
+         )
+     if flux_available and isinstance(executor, flux.job.FluxExecutor):
+-        return run_job_with_runmode_executor_flux(
++        run_job_with_runmode_executor_flux(
+             job=job, executor=executor, gpus_per_slot=gpus_per_slot
+         )
+     elif isinstance(executor, ProcessPoolExecutor):
+-        return run_job_with_runmode_executor_futures(job=job, executor=executor)
++        run_job_with_runmode_executor_futures(job=job, executor=executor)
+     else:
+         raise NotImplementedError(
+             "Currently only flux.job.FluxExecutor and concurrent.futures.ProcessPoolExecutor are supported."
+@@ -617,7 +617,7 @@ def run_job_with_runmode_executor_flux(job, executor, gpus_per_slot=None):
+     )
+     jobspec.cwd = job.project_hdf5.working_directory
+     jobspec.environment = dict(os.environ)
+-    return executor.submit(jobspec)
++    job.server.future = executor.submit(jobspec)
+ 
+ 
+ def run_time_decorator(func):
