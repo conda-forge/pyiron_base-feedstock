@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.6.3" %}
-{% set sha256 = "ceebeee8406abbb678d5252d642c0e0cf7a1e25973011c8bf25b866f7396f62f" %}
+{% set version = "0.6.4" %}
+{% set sha256 = "1f645cb479ea5bb8a2c7aa52f27c24bc84890fb2bc7faa35d83449f1fc73d0dc" %}
 
 package:
   name: {{ name|lower }}
@@ -10,12 +10,10 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - flux_render.patch
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - pyiron = pyiron_base.cli:main
@@ -26,7 +24,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - dill >=0.3.6
+    - dill >=0.3.7
     - gitpython >=3.1.32
     - git
     - h5io >=0.1.8
@@ -38,7 +36,7 @@ requirements:
     - psutil >=5.9.5
     - pyfileindex >=0.0.11
     - pysqa >=0.1.0
-    - sqlalchemy >=2.0.19
+    - sqlalchemy >=2.0.20
     - pytables >=3.6.1 # for fenics compatibility
     - tqdm >=4.65.0
     - traitlets >=5.9.0
