@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.6.4" %}
-{% set sha256 = "1f645cb479ea5bb8a2c7aa52f27c24bc84890fb2bc7faa35d83449f1fc73d0dc" %}
+{% set version = "0.6.5" %}
+{% set sha256 = "e944b80f022effd2a9318ec4cdb7ec7d834cf992690aee818d60260ed946bc2a" %}
 
 package:
   name: {{ name|lower }}
@@ -25,20 +25,20 @@ requirements:
   run:
     - python >=3.8
     - dill >=0.3.7
-    - gitpython >=3.1.32
+    - gitpython >=3.1.34
     - git
-    - h5io >=0.1.8
+    - h5io >=0.1.9
     - h5py >=2.10.0  # for tensorflow compatibility
     - jinja2 =3.1.2
     - numpy >=1.19.5  # for numba and pytorch compatibility
-    - pandas >=2.0.3
+    - pandas >=2.1.0
     - pint >=0.21  # for backwards compatibility to python 3.8
     - psutil >=5.9.5
     - pyfileindex >=0.0.11
-    - pysqa >=0.1.0
+    - pysqa >=0.1.1
     - sqlalchemy >=2.0.20
     - pytables >=3.6.1 # for fenics compatibility
-    - tqdm >=4.65.0
+    - tqdm >=4.65.1
     - traitlets >=5.9.0
 
 test:
