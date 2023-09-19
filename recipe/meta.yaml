@@ -1,6 +1,6 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.6.5" %}
-{% set sha256 = "e944b80f022effd2a9318ec4cdb7ec7d834cf992690aee818d60260ed946bc2a" %}
+{% set version = "0.6.6" %}
+{% set sha256 = "9ee56dc19d35164102eb906d111abc17b487a17fc1617bb07aed7641ab78b907" %}
 
 package:
   name: {{ name|lower }}
@@ -35,11 +35,11 @@ requirements:
     - pint >=0.21  # for backwards compatibility to python 3.8
     - psutil >=5.9.5
     - pyfileindex >=0.0.11
-    - pysqa >=0.1.1
+    - pysqa >=0.1.2
     - sqlalchemy >=2.0.20
     - pytables >=3.6.1 # for fenics compatibility
     - tqdm >=4.65.1
-    - traitlets >=5.9.0
+    - traitlets >=5.10.0
 
 test:
   imports:
