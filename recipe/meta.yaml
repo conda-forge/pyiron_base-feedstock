@@ -48,7 +48,6 @@ test:
     - pyiron --help
   requires:
     - pip
-    - git
 
 about:
   home: https://github.com/pyiron/pyiron_base
