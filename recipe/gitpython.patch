@@ -1,0 +1,30 @@
+From 52185155a0b4dbe6a5acf71cd3692c98c9ecef6c Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Jan=20Jan=C3=9Fen?= <janssen@mpie.de>
+Date: Sun, 8 Oct 2023 09:34:41 +0200
+Subject: [PATCH] Move git import inside the function
+
+---
+ pyiron_base/project/maintenance.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/pyiron_base/project/maintenance.py b/pyiron_base/project/maintenance.py
+index fa5c34bfb..fa6543a3a 100644
+--- a/pyiron_base/project/maintenance.py
++++ b/pyiron_base/project/maintenance.py
+@@ -4,7 +4,6 @@
+ import warnings
+ 
+ import pandas
+-from git import Repo, InvalidGitRepositoryError
+ 
+ from pyiron_base import state
+ from pyiron_base.database.performance import get_database_statistics
+@@ -48,6 +47,8 @@ def get_repository_status():
+         Returns:
+             pandas.DataFrame: The name of each module and the hash and version for its current git head.
+         """
++        from git import Repo, InvalidGitRepositoryError
++
+         module_names = [
+             name for _, name, _ in pkgutil.iter_modules() if name.startswith("pyiron")
+         ]
