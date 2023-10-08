@@ -41,7 +41,6 @@ requirements:
 test:
   imports:
     - pyiron_base
-    - test_benchmarks
   commands:
     - pip check
     - pyiron --help
