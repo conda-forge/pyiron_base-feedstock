@@ -7,18 +7,7 @@ Home: https://github.com/pyiron/pyiron_base
 
 Package license: BSD-3-Clause
 
-Summary: Core module for pyiron - an integrated development environment (IDE) for computational materials science.
-
-Development: https://github.com/pyiron
-
-Documentation: https://pyiron.org
-
-pyiron was initially developed in the Computational Materials Design department of Joerg Neugebauer at the
-Max Planck Insitut für Eisenforschung (Max Planck Insitute for iron research) as a framework for ab initio
-thermodynamics. In collaboration with the Interdisciplinary Centre for Advanced Materials Simulation (ICAMS)
-the framework was recently extended for high throughput applications resulting in the opensource release of
-pyiron.
-
+Summary: pyiron_base - an integrated development environment (IDE) for computational science.
 
 Current build status
 ====================
