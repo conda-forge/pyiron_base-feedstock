@@ -20,6 +20,23 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - dill
+    - gitpython
+    - h5io
+    - h5py
+    - jinja2
+    - numpy
+    - pandas
+    - pint
+    - psutil
+    - pyfileindex
+    - pysqa
+    - sqlalchemy
+    - pytables
+    - tqdm
+    - traitlets
+    - versioneer
+    - toml
   run:
     - python >=3.8
     - dill >=0.3.1.1,<=0.3.7
@@ -37,8 +54,6 @@ requirements:
     - pytables ==3.9.1
     - tqdm ==4.66.1
     - traitlets >=5.1.1,<=5.13.0
-    - versioneer
-    - toml
 
 test:
   imports:
