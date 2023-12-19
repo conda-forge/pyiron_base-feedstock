@@ -1,5 +1,5 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.6.13" %}
+{% set version = "0.6.14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
-  sha256: a4efe2767ebd11957de329ae1fb583583f60a72cb925266b0041a37c2f7465a5
+  sha256: d1e26e1ffc49a1d085e19abda380de84e0f4ef35cbae04cfa8122707a6ab9f44
 
 build:
   entry_points:
@@ -38,6 +38,7 @@ requirements:
     - versioneer
     - toml
   run:
+    - cloudpickle >=2.0.0,<=3.0.0
     - python >=3.8
     - dill >=0.3.1.1,<=0.3.7
     - gitpython >=3.1.23,<=3.1.40
