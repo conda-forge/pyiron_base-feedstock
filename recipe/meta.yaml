@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
   sha256: d1e26e1ffc49a1d085e19abda380de84e0f4ef35cbae04cfa8122707a6ab9f44
+  patches:
+    - dill.patch
 
 build:
   entry_points:
@@ -20,7 +22,7 @@ requirements:
   host:
     - python >=3.8
     - pip
-    - dill
+    - cloudpickle
     - gitpython
     - h5io
     - h5py
@@ -45,7 +47,7 @@ requirements:
     - h5io >=0.1.2,<=0.1.9
     - h5py >=3.6.0,<=3.10.0
     - jinja2 >=2.11.3,<=3.1.2
-    - numpy >=1.23.5,<=1.26.2 # for numba and pytorch compatibility
+    - numpy >=1.23.5,<=1.26.2
     - pandas >=2.0.0,<=2.1.4
     - pint >=0.18,<=0.23
     - psutil >=5.8.0,<=5.9.7
