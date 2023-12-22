@@ -1,5 +1,5 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.6.14" %}
+{% set version = "0.6.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
-  sha256: d1e26e1ffc49a1d085e19abda380de84e0f4ef35cbae04cfa8122707a6ab9f44
-  patches:
-    - dill.patch
+  sha256: 3f15788e9542ab0d6ec566380071e8e8eadec567014214c56c80b031861a121d
 
 build:
   entry_points:
