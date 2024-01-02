@@ -23,6 +23,7 @@ requirements:
     - cloudpickle
     - gitpython
     - h5io
+    - h5io_browser
     - h5py
     - jinja2
     - numpy
