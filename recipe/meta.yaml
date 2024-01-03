@@ -1,5 +1,5 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.6.17" %}
+{% set version = "0.6.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
-  sha256: 815fecebd3dcfca90de10f10c0fe9ee279d32df2e2c2467555b4d7c170b88871
+  sha256: 04368ba03e62e3b5b872c16f6780b1f29fad76cfbd5df96587c353e9b05aa3e6
 
 build:
   entry_points:
@@ -22,7 +22,6 @@ requirements:
     - pip
     - cloudpickle
     - gitpython
-    - h5io
     - h5io_browser
     - h5py
     - jinja2
@@ -39,11 +38,10 @@ requirements:
     - versioneer
     - toml
   run:
-    - h5io_browser ==0.0.2
     - cloudpickle >=2.0.0,<=3.0.0
     - python >=3.8
     - gitpython >=3.1.23,<=3.1.40
-    - h5io >=0.1.8,<=0.1.10
+    - h5io_browser >=0.0.2,<=0.0.3
     - h5py >=3.6.0,<=3.10.0
     - jinja2 >=2.11.3,<=3.1.2
     - numpy >=1.23.5,<=1.26.2
