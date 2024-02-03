@@ -1,5 +1,5 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.7.2" %}
+{% set version = "0.7.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
-  sha256: 877b65fecdf35affc25b8b6a63589a72d9f990cb2cb3fc2294820403f8492209
+  sha256: 970967b6c3e08293197ed07331277730bca7d5cd64ac9a485ec942fe06449ac0
 
 build:
   entry_points:
@@ -49,7 +49,7 @@ requirements:
     - pint >=0.18,<=0.23
     - psutil >=5.8.0,<=5.9.8
     - pyfileindex >=0.0.16,<=0.0.21
-    - pysqa >=0.1.5,<=0.1.11
+    - pysqa ==0.1.12
     - sqlalchemy >=2.0.22,<=2.0.25
     - pytables >=3.6.1,<=3.9.2
     - tqdm >=4.44.0,<=4.66.1
