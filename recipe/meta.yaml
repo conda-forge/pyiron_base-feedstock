@@ -25,6 +25,7 @@ requirements:
     - h5io_browser
     - h5py
     - jinja2
+    - monty
     - numpy
     - pandas
     - pint
