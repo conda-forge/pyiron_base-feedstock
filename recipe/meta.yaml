@@ -1,5 +1,5 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.7.5" %}
+{% set version = "0.7.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
-  sha256: d32544479e5c3bee28301da8810a6c9dda0410f8d2d2656029d9d3f82cc8ef87
+  sha256: 4c7bfa9472350a11c2be7a5a7a07ba155d2928cbd9e7b8ea284163c61f28ad81
 
 build:
   entry_points:
     - pyiron=pyiron_base.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
