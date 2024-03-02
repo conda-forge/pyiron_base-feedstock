@@ -1,5 +1,5 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.7.9" %}
+{% set version = "0.7.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
-  sha256: 3d04a29757a1626f376aa718234d0db8d46eeab2d0cda1d73701489c43e085fa
+  sha256: 864f5157be453eea90f2829c29887e42b189034cb516f72f199052f410e17dac
 
 build:
   entry_points:
@@ -39,20 +39,20 @@ requirements:
     - versioneer
     - toml
   run:
-    - pympipool >=0.7.11,<=0.7.13
+    - pympipool >=0.7.11,<=0.7.17
     - monty >=2021.3.3,<=2024.2.2
     - cloudpickle >=2.0.0,<=3.0.0
     - python >=3.8
     - gitpython >=3.1.23,<=3.1.42
-    - h5io_browser >=0.0.6,<=0.0.9
+    - h5io_browser >=0.0.6,<=0.0.10
     - h5py >=3.6.0,<=3.10.0
     - jinja2 >=2.11.3,<=3.1.3
     - numpy >=1.23.5,<=1.26.4
-    - pandas >=2.0.0,<=2.2.0
+    - pandas >=2.0.0,<=2.2.1
     - pint >=0.18,<=0.23
     - psutil >=5.8.0,<=5.9.8
-    - pyfileindex >=0.0.16,<=0.0.22
-    - pysqa >=0.1.12,<=0.1.15
+    - pyfileindex >=0.0.16,<=0.0.23
+    - pysqa >=0.1.12,<=0.1.17
     - sqlalchemy >=2.0.22,<=2.0.27
     - pytables >=3.6.1,<=3.9.2
     - tqdm >=4.44.0,<=4.66.2
@@ -79,4 +79,3 @@ extra:
     - pyiron-runner
     - jan-janssen
     - pmrv
-    - niklassiemer
