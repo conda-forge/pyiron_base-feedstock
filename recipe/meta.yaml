@@ -8,13 +8,15 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
   sha256: 0d63f1f45b2f473ced9880e5c08991a4af8c48c0594f7e1b4c3d8f75ad5b00f3
+  patches:
+    - restart_file_lst.patch
 
 build:
   entry_points:
     - pyiron=pyiron_base.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
