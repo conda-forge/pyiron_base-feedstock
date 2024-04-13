@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
   sha256: d2dcd0e024daabbbbb2bb86df4ae9ffa95c49b053195e019eec60fab8b32451d
-  patches:
-    - restart_file_lst.patch
 
 build:
   entry_points:
