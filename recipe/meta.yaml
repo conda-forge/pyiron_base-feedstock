@@ -36,6 +36,7 @@ requirements:
     - pytables
     - tqdm
     - traitlets
+    - pyiron_snippets
     - versioneer
     - toml
   run:
