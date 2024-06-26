@@ -1,5 +1,5 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.9.4" %}
+{% set version = "0.9.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
-  sha256: 0b69b154edf7e4d4bc53c20d76bdf4bd686c40bdff13a5ca723e4a5511e95a8a
+  sha256: c679daa3eeb71036b54cef6c6a4ced52bcc9903188e9b65f7344fa4406b97a24
 
 build:
   entry_points:
@@ -40,21 +40,21 @@ requirements:
     - versioneer
     - toml
   run:
-    - pyiron_snippets >=0.1.1,<=0.1.2
-    - pympipool >=0.8.0,<=0.8.4
-    - monty >=2021.3.3,<=2024.5.24
-    - cloudpickle >=2.0.0,<=3.0.0
     - python >=3.8,<3.13
+    - cloudpickle >=2.0.0,<=3.0.0
     - gitpython >=3.1.23,<=3.1.43
     - h5io_browser >=0.0.14,<=0.0.15
-    - h5py >=3.6.0,<=3.11.0
+    - h5py >=3.6.0,<=3.11.0    
     - jinja2 >=2.11.3,<=3.1.4
+    - monty >=2021.3.3,<=2024.5.24
     - numpy >=1.23.5,<=1.26.4
     - pandas >=2.0.0,<=2.2.2
-    - pint >=0.18,<=0.24
-    - psutil >=5.8.0,<=5.9.8
+    - pint >=0.18,<=0.24.1
+    - psutil >=5.8.0,<=6.0.0
     - pyfileindex >=0.0.16,<=0.0.25
-    - pysqa >=0.1.12,<=0.1.20
+    - pyiron_snippets >=0.1.1,<=0.1.2
+    - pympipool >=0.8.0,<=0.8.5
+    - pysqa >=0.1.12,<=0.1.21
     - sqlalchemy >=2.0.22,<=2.0.31
     - pytables >=3.6.1,<=3.9.2
     - tqdm >=4.44.0,<=4.66.4
