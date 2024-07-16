@@ -14,7 +14,7 @@ build:
     - pyiron=pyiron_base.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -54,7 +54,6 @@ requirements:
     - psutil >=5.8.0,<=6.0.0
     - pyfileindex >=0.0.16,<=0.0.25
     - pyiron_snippets >=0.1.1,<=0.1.2
-    - pympipool >=0.8.0,<=0.8.5
     - pysqa >=0.1.12,<=0.1.21
     - sqlalchemy >=2.0.22,<=2.0.31
     - pytables >=3.6.1,<=3.9.2
