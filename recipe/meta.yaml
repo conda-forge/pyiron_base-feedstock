@@ -1,5 +1,5 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.9.6" %}
+{% set version = "0.9.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
-  sha256: 7335940d6e2e76930b50ff5b99623f20e033509af6de08a4efa45a8af3063e32
+  sha256: 1fdb933b24d97dbba593496edbb0ccd0b7a48f32e42d5d2210e2ead97bcf188b
 
 build:
   entry_points:
@@ -40,16 +40,17 @@ requirements:
     - versioneer
     - toml
   run:
+    - executorlib ==0.0.1
     - python >=3.8,<3.13
     - cloudpickle >=2.0.0,<=3.0.0
     - gitpython >=3.1.23,<=3.1.43
     - h5io_browser >=0.0.14,<=0.0.15
-    - h5py >=3.6.0,<=3.11.0    
+    - h5py >=3.6.0,<=3.11.0
     - jinja2 >=2.11.3,<=3.1.4
-    - monty >=2021.3.3,<=2024.5.24
+    - monty >=2021.3.3,<=2024.7.12
     - numpy >=1.23.5,<=1.26.4
     - pandas >=2.0.0,<=2.2.2
-    - pint >=0.18,<=0.24.1
+    - pint >=0.18,<=0.24.3
     - psutil >=5.8.0,<=6.0.0
     - pyfileindex >=0.0.16,<=0.0.25
     - pyiron_snippets >=0.1.1,<=0.1.2
