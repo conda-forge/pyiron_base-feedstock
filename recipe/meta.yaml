@@ -1,5 +1,5 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.9.7" %}
+{% set version = "0.9.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
-  sha256: 1fdb933b24d97dbba593496edbb0ccd0b7a48f32e42d5d2210e2ead97bcf188b
+  sha256: 922470f44f8cf3613dc97185d38698d431c9d3a6e299bc0fe50801ed8e4d5034
 
 build:
   entry_points:
     - pyiron=pyiron_base.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -44,7 +44,7 @@ requirements:
     - python >=3.8,<3.13
     - cloudpickle >=2.0.0,<=3.0.0
     - gitpython >=3.1.23,<=3.1.43
-    - h5io_browser >=0.0.14,<=0.0.15
+    - h5io_browser >=0.0.14,<=0.0.16
     - h5py >=3.6.0,<=3.11.0
     - jinja2 >=2.11.3,<=3.1.4
     - monty >=2021.3.3,<=2024.7.12
