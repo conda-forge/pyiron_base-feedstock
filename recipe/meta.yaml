@@ -10,13 +10,14 @@ source:
   sha256: b8a26a9ab0663bc03b43c1e21cdaef4e30ae84e29e2a82e4f01dc81a2f12ecd8
   patches:
     - lockable.patch
+    - pack.patch
 
 build:
   entry_points:
     - pyiron=pyiron_base.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
