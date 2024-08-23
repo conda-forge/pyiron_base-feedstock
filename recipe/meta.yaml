@@ -11,13 +11,14 @@ source:
   patches:
     - lockable.patch
     - pack.patch
+    - datacontainer.patch
 
 build:
   entry_points:
     - pyiron=pyiron_base.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 3
 
 requirements:
   host:
@@ -42,6 +43,7 @@ requirements:
     - pyiron_snippets
     - versioneer
     - toml
+    - setuptools
   run:
     - executorlib ==0.0.1
     - python >=3.8,<3.13

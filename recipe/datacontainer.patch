@@ -1,0 +1,47 @@
+From b59d409a53772ac208b68913b3e08061215ae025 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Fri, 23 Aug 2024 22:17:12 +0200
+Subject: [PATCH] Server2 (#1621)
+
+* Revert changes to DataContainer storage format
+
+PR #1364 changed saved the contents of the container in a data subgroup,
+but that breaks backwards compat and is not actually necessary for the
+TemplateJob, so revert it here.
+
+* Handle list in to_dict
+
+---------
+
+Co-authored-by: Marvin Poul <poul@mpie.de>
+---
+ pyiron_base/storage/datacontainer.py | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+
+diff --git a/pyiron_base/storage/datacontainer.py b/pyiron_base/storage/datacontainer.py
+index 46346c063..4adfa55e4 100644
+--- a/pyiron_base/storage/datacontainer.py
++++ b/pyiron_base/storage/datacontainer.py
+@@ -1027,13 +1027,19 @@ def to(v):
+         return data
+ 
+     def _to_dict(self):
+-        return {"data": self.to_builtin(), "READ_ONLY": self.read_only}
++        data = self.to_builtin()
++        if isinstance(data, list):
++            data = {str(i): v for i, v in enumerate(data)}
++        data["READ_ONLY"] = self.read_only
++        return data
+ 
+     def _from_dict(self, obj_dict, version=None):
++        self.read_only = obj_dict.pop("READ_ONLY", False)
++        for key in _internal_hdf_nodes:
++            obj_dict.pop(key, None)
+         with self.unlocked():
+             self.clear()
+-            self.update(obj_dict["data"], wrap=True)
+-        self.read_only = obj_dict.get("READ_ONLY", False)
++            self.update(obj_dict)
+ 
+ 
+ HDFStub.register(DataContainer, lambda h, g: h[g].to_object(lazy=True))
