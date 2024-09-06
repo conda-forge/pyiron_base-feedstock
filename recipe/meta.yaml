@@ -8,10 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
   sha256: 32e69fe1a3524e70eef70be04a792065701e88e38a252c83335b63c4ac9854ef
-  patches:
-    - lockable.patch
-    - pack.patch
-    - datacontainer.patch
 
 build:
   entry_points:
