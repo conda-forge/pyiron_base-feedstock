@@ -36,12 +36,13 @@ requirements:
     - pytables
     - tqdm
     - traitlets
+    - pyiron_dataclasses
     - pyiron_snippets
     - versioneer
     - toml
     - setuptools
   run:
-    - pyiron_dataclasses ==0.0.1
+    - pyiron_dataclasses =0.0.1
     - executorlib >=0.0.1,<=0.0.4
     - python >=3.8,<3.13
     - cloudpickle >=2.0.0,<=3.1.0
