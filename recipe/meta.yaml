@@ -20,6 +20,7 @@ requirements:
   host:
     - python >=3.8,<3.13
     - pip
+    - setuptools
     - cloudpickle
     - gitpython
     - h5io_browser
