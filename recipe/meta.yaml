@@ -1,5 +1,5 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.10.4" %}
+{% set version = "0.10.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
-  sha256: 8f1cec0ef3aeaf84662b76078928bb35a89642a4b66dfb175de882bcd6b77f65
+  sha256: 924c9a6bd9a74f8aaca6b1c1f41c97d476b4f850a8f2a390e5d603e298444d83
 
 build:
   entry_points:
@@ -49,8 +49,8 @@ requirements:
     - cloudpickle >=2.0.0,<=3.1.0
     - h5io_browser >=0.0.14,<=0.1.4
     - h5py >=3.6.0,<=3.12.1
-    - monty >=2021.3.3,<=2024.7.30
-    - numpy >=1.23.5,<=2.1.2
+    - monty >=2021.3.3,<=2024.10.21
+    - numpy >=1.23.5,<=1.26.4
     - pandas >=2.0.0,<=2.2.3
     - psutil >=5.8.0,<=6.0.0
     - pyfileindex >=0.0.16,<=0.0.30
