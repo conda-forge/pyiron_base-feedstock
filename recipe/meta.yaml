@@ -1,5 +1,5 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.10.8" %}
+{% set version = "0.10.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
-  sha256: e2e70df752533acc38a18107b2263937df8c403b2bb82e6ae08cc0b2893de3d8
+  sha256: e741731dbdb147e1d662a20d68ada87e481e7884d446759dd23e241345a0c69f
 
 build:
   entry_points:
@@ -58,7 +58,7 @@ requirements:
     - pysqa >=0.1.12,<=0.2.2
     - sqlalchemy >=2.0.22,<=2.0.36
     - pytables >=3.6.1,<=3.10.1
-    - tqdm >=4.44.0,<=4.67.0
+    - tqdm >=4.44.0,<=4.67.1
     - traitlets >=5.1.1,<=5.14.3
 
 test:
