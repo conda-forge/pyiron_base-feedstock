@@ -1,5 +1,5 @@
 {% set name = "pyiron_base" %}
-{% set version = "0.11.9" %}
+{% set version = "0.11.10" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
-  sha256: eea65f316c6cb9665182ab892ec44851e41485d8968d86a5b750564ec2c23339
+  sha256: 0223e73493e661e373aa396e6877efff0952d404b9db85aaf01ae67991897e34
 
 build:
   entry_points:
@@ -45,7 +45,7 @@ requirements:
     - setuptools
   run:
     - pyiron_dataclasses ==0.0.1
-    - executorlib >=0.1.0,<=1.0.0
+    - executorlib >=0.1.0,<=1.0.1
     - python >={{ python_min }},<3.13
     - cloudpickle >=2.0.0,<=3.1.1
     - h5io_browser >=0.0.14,<=0.1.9
