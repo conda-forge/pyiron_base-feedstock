@@ -27,7 +27,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-pyiron_base-green.svg)](https://anaconda.org/conda-forge/pyiron_base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyiron_base.svg)](https://anaconda.org/conda-forge/pyiron_base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyiron_base.svg)](https://anaconda.org/conda-forge/pyiron_base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyiron_base.svg)](https://anaconda.org/conda-forge/pyiron_base) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pyiron__base-green.svg)](https://anaconda.org/conda-forge/pyiron_base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pyiron_base.svg)](https://anaconda.org/conda-forge/pyiron_base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pyiron_base.svg)](https://anaconda.org/conda-forge/pyiron_base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pyiron_base.svg)](https://anaconda.org/conda-forge/pyiron_base) |
 
 Installing pyiron_base
 ======================
