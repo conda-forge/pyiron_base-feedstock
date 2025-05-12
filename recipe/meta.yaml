@@ -15,7 +15,7 @@ build:
     - pyiron=pyiron_base.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -46,7 +46,7 @@ requirements:
   run:
     - pyiron_dataclasses ==0.0.1
     - executorlib >=0.1.0,<=1.2.0
-    - python >={{ python_min }},<3.13
+    - python >={{ python_min }},<3.14
     - cloudpickle >=2.0.0,<=3.1.1
     - h5io_browser >=0.0.14,<=0.1.10
     - h5py >=3.6.0,<=3.13.0
