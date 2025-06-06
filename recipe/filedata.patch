@@ -1,0 +1,29 @@
+From ea68761cc99624806354bf1966861d60b9f14757 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Jan=20Jan=C3=9Fen?= <janssen@mpie.de>
+Date: Fri, 6 Jun 2025 11:45:48 +0200
+Subject: [PATCH] add filedata
+
+---
+ pyiron_base/__init__.py | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/pyiron_base/__init__.py b/pyiron_base/__init__.py
+index 33b5844c1..2fe3e31d1 100644
+--- a/pyiron_base/__init__.py
++++ b/pyiron_base/__init__.py
+@@ -38,6 +38,7 @@
+ from pyiron_base.state.settings import Settings
+ from pyiron_base.storage.datacontainer import DataContainer
+ from pyiron_base.storage.flattenedstorage import FlattenedStorage
++from pyiron_base.storage.filedata import load_file, FileDataTemplate, FileData
+ from pyiron_base.storage.has_stored_traits import HasStoredTraits
+ from pyiron_base.storage.hdfio import FileHDFio, ProjectHDFio
+ from pyiron_base.storage.inputlist import InputList
+@@ -109,4 +110,7 @@
+     add_module_conversion,
+     LocalMaintenance,
+     Maintenance,
++    load_file,
++    FileDataTemplate,
++    FileData,
+ ]
