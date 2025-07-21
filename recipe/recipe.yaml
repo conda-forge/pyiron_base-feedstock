@@ -1,25 +1,29 @@
-{% set name = "pyiron_base" %}
-{% set version = "0.13.3" %}
-{% set python_min = "3.10" %}
+schema_version: 1
+
+context:
+  name: pyiron_base
+  version: 0.13.3
+  python_min: 3.10
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyiron_base-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyiron_base-${{ version }}.tar.gz
   sha256: bbd9ee7f8ef9530fff1d1baa7b54ea12b00ccc168828c99af4e62cfa3cb0beed
 
 build:
-  entry_points:
-    - pyiron=pyiron_base.cli:main
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - pyiron=pyiron_base.cli:main
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python 3.10.*
     - pip
     - setuptools
     - cloudpickle
@@ -44,7 +48,7 @@ requirements:
     - toml
     - setuptools
   run:
-    - python >={{ python_min }},<3.14
+    - python >=${{ python_min }},<3.14
     - cloudpickle >=2.0.0,<=3.1.1
     - executorlib >=0.1.0,<=1.6.0
     - h5io_browser >=0.0.14,<=0.1.13
@@ -62,21 +66,24 @@ requirements:
     - tqdm >=4.44.0,<=4.67.1
     - traitlets >=5.1.1,<=5.14.3
 
-test:
-  imports:
-    - pyiron_base
-  commands:
-    - pip check
-    - pyiron --help
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+  - python:
+      imports:
+        - pyiron_base
+      pip_check: true
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pyiron --help
 
 about:
-  home: https://github.com/pyiron/pyiron_base
   summary: pyiron_base - an integrated development environment (IDE) for computational science.
   license: BSD-3-Clause
   license_file: LICENSE
+  homepage: https://github.com/pyiron/pyiron_base
 
 extra:
   recipe-maintainers:
