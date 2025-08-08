@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: pyiron_base
-  version: 0.13.3
-  python_min: 3.10
+  version: "0.13.4"
+  python_min: '3.10'
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyiron_base-${{ version }}.tar.gz
-  sha256: bbd9ee7f8ef9530fff1d1baa7b54ea12b00ccc168828c99af4e62cfa3cb0beed
+  sha256: 01a5724c7a4667aaa75b15298567170fb3ac5fa58182be596bc2231a29cf15bf
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
