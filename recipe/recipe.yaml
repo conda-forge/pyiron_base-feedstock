@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: pyiron_base
-  version: "0.13.5"
-  python_min: '3.10'
+  version: "0.14.0"
+  python_min: '3.11'
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyiron_base-${{ version }}.tar.gz
-  sha256: 82cd583727cdaf2ea8094678e7ee4b0a415e20ca73a4e86a313d825205bb8e51
+  sha256: 32b0a71ba1de4694ad11a5cf295690b51ac0a049d530f5909f9919e28a7df20f
 
 build:
   number: 0
@@ -44,9 +44,8 @@ requirements:
     - traitlets
     - pyiron_dataclasses
     - pyiron_snippets
-    - versioneer
-    - toml
-    - setuptools
+    - hatchling
+    - hatch-vcs
   run:
     - python >=${{ python_min }},<3.14
     - cloudpickle >=2.0.0,<=3.1.1
@@ -62,7 +61,7 @@ requirements:
     - pyiron_snippets >=0.1.3,<=0.2.0
     - pysqa >=0.1.12,<=0.3.0
     - sqlalchemy >=2.0.22,<=2.0.43
-    - pytables >=3.6.1,<=3.10.2
+    - pytables =3.10.2
     - tqdm >=4.44.0,<=4.67.1
     - traitlets >=5.1.1,<=5.14.3
 
