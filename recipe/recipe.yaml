@@ -49,7 +49,7 @@ requirements:
   run:
     - python >=${{ python_min }},<3.14
     - cloudpickle >=2.0.0,<=3.1.1
-    - executorlib >=0.1.0,<=1.7.0
+    - executorlib >=0.1.0,<=1.7.1
     - h5io_browser >=0.0.14,<=0.2.0
     - h5py >=3.6.0,<=3.13.0
     - numpy >=1.23.5,<=2.3.2
