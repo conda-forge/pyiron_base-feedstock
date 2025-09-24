@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyiron_base
-  version: "0.15.0"
+  version: "0.15.1"
   python_min: '3.11'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyiron_base-${{ version }}.tar.gz
-  sha256: 08f7b89d7af7930e8dfaa25c310aa3994796696cdac52a7f27118be6fc8c3dd7
+  sha256: 62806100d8a70b82a34b4607dc85815a2c1d2a9e2d2eb34d3607040c0f48c6dc
 
 build:
   number: 0
