@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyiron_base
-  version: "0.15.4"
+  version: "0.15.5"
   python_min: '3.11'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyiron_base-${{ version }}.tar.gz
-  sha256: 511a5257b475284e086ff6b4f688cac05199f472c1faeb035b79e3699689c18c
+  sha256: 10e48393f68ed19fc9d733cf1c9c3ead65109d19b02b41f59f771de32db5d409
 
 build:
   number: 0
@@ -50,17 +50,17 @@ requirements:
     - python >=${{ python_min }},<3.14
     - cloudpickle >=2.2.1,<=3.1.1
     - executorlib >=0.1.0,<=1.7.1
-    - h5io_browser >=0.0.14,<=0.2.3
-    - h5py >=3.11.0,<=3.14.0
+    - h5io_browser >=0.0.14,<=0.2.4
+    - h5py >=3.11.0,<=3.15.0
     - numpy >=1.26.0,<=2.3.3
     - monty >=2025.1.3,<=2025.3.3
     - pandas >=2.0.0,<=2.3.3
     - psutil >=5.9.3,<=7.1.0
     - pyfileindex >=0.0.16,<=0.0.42
     - pyiron_dataclasses ==0.0.4
-    - pyiron_snippets ==1.0.1
+    - pyiron_snippets >=1.0.1,<=1.0.2
     - pysqa >=0.1.12,<=0.3.2
-    - sqlalchemy >=2.0.22,<=2.0.43
+    - sqlalchemy >=2.0.22,<=2.0.44
     - pytables =3.10.2
     - tqdm >=4.44.0,<=4.67.1
     - traitlets >=5.1.1,<=5.14.3
