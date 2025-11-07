@@ -1,0 +1,22 @@
+From dd47968b86d9402d4499b74d2b7aea142465764e Mon Sep 17 00:00:00 2001
+From: Jan Janssen <janssen@mpie.de>
+Date: Fri, 7 Nov 2025 15:19:29 +0100
+Subject: [PATCH] Fix copy_to()
+
+Without this fix the restart() function does not work
+---
+ pyiron_base/jobs/job/base.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/pyiron_base/jobs/job/base.py b/pyiron_base/jobs/job/base.py
+index 2f1aebbb5..147182dce 100644
+--- a/pyiron_base/jobs/job/base.py
++++ b/pyiron_base/jobs/job/base.py
+@@ -858,6 +858,7 @@ def _internal_copy_to(
+         new_job_core = self.copy()
+         new_job_core._name = new_job_name
+         new_job_core._hdf5 = hdf5_project
++        new_job_core._hdf5_content = HDF5Content(project_hdf5=hdf5_project)
+         new_job_core._master_id = self._master_id
+         new_job_core._parent_id = self._parent_id
+         new_job_core._master_id = self._master_id

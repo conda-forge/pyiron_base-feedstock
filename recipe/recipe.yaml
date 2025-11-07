@@ -12,9 +12,11 @@ package:
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyiron_base-${{ version }}.tar.gz
   sha256: 4044b4311d4be678e24483cda4205157ed943205c42091b8e0eaf501c6adab51
+  patches:
+    - restart.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
