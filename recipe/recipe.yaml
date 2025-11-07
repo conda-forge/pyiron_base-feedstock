@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyiron_base
-  version: "0.15.8"
+  version: "0.15.9"
   python_min: '3.11'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyiron_base-${{ version }}.tar.gz
-  sha256: fbaab01da18a595943d891e6c979a5c03443dd4e451bd389d89bd033d4a3d74d
+  sha256: 4044b4311d4be678e24483cda4205157ed943205c42091b8e0eaf501c6adab51
 
 build:
   number: 0
@@ -57,7 +57,7 @@ requirements:
     - pandas >=2.0.0,<=2.3.3
     - psutil >=5.9.3,<=7.1.3
     - pyfileindex >=0.0.16,<=0.1.0
-    - pyiron_dataclasses >=0.0.4,<=0.0.6
+    - pyiron_dataclasses >=0.0.4,<=0.0.7
     - pyiron_snippets >=1.0.1,<=1.0.2
     - pysqa >=0.1.12,<=0.3.3
     - sqlalchemy >=2.0.22,<=2.0.44
