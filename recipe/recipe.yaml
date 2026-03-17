@@ -16,7 +16,7 @@ source:
     - snippets.patch
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -60,7 +60,7 @@ requirements:
     - psutil >=5.9.3,<=7.2.2
     - pyfileindex >=0.0.16,<=0.1.4
     - pyiron_dataclasses >=0.0.4,<=0.0.11
-    - pyiron_snippets >=1.0.1,<=1.0.2
+    - pyiron_snippets >=1.0.1,<=1.2.1
     - pysqa >=0.1.12,<=0.3.5
     - sqlalchemy >=2.0.22,<=2.0.48
     - pytables =3.10.2
