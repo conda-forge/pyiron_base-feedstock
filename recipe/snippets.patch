@@ -1,0 +1,22 @@
+From ab3a91137a67aec5189105995f3056ded406d569 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Mon, 16 Mar 2026 21:37:48 -0700
+Subject: [PATCH] Update pyiron_snippets to 1.2.1 (#1982)
+
+---
+ pyproject.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index a52c1fbe2..8b80c2185 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -33,7 +33,7 @@ dependencies = [
+     "psutil>=5.9.3,<=7.2.2",
+     "pyfileindex>=0.0.16,<=0.1.4",
+     "pyiron_dataclasses>=0.0.4,<=0.0.11",
+-    "pyiron_snippets>=1.0.1,<=1.0.2",
++    "pyiron_snippets>=1.0.1,<=1.2.1",
+     "pysqa>=0.1.12,<=0.3.5",
+     "sqlalchemy>=2.0.22,<=2.0.48",
+     "tables==3.10.2",
