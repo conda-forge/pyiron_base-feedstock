@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyiron_base
-  version: "0.15.19"
+  version: "0.15.20"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyiron_base-${{ version }}.tar.gz
-  sha256: 1acef53b33d11029e621ff11233ea751ef3c0299ea140006ca06d070edf6150b
+  sha256: 0340e0e54d644ad138ef5902708bcd3b6a874a8c8a50213b34a95724661c8ea2
 
 build:
   number: 0
@@ -49,19 +49,19 @@ requirements:
     - python >=${{ python_min }},<3.14
     - cloudpickle >=2.2.1,<=3.1.2
     - executorlib >=0.1.0,<=1.10.3
-    - h5io_browser >=0.0.14,<=0.2.17
+    - h5io_browser >=0.0.14,<=0.2.18
     - h5py >=3.11.0,<=3.16.0
     - numpy >=1.26.0,<=2.5.3
     - monty >=2025.1.3,<=2026.2.18
-    - pandas >=2.0.0,<=3.0.5
+    - pandas >=2.0.0,<=3.0.6
     - psutil >=5.9.3,<=7.2.2
-    - pyfileindex >=0.2.0,<=0.2.2
+    - pyfileindex >=0.2.0,<=0.2.3
     - pyiron_dataclasses >=0.0.4,<=0.0.14
     - pyiron_snippets >=1.0.1,<=1.5.0
-    - pysqa >=0.1.12,<=1.0.0
-    - sqlalchemy >=2.0.22,<=2.0.52
+    - pysqa >=0.1.12,<=1.0.1
+    - sqlalchemy >=2.0.22,<=2.0.54
     - pytables ==3.11.1
-    - tqdm >=4.44.0,<=4.70.0
+    - tqdm >=4.44.0,<=4.70.1
     - traitlets >=5.1.1,<=5.16.1
 tests:
   - python:
