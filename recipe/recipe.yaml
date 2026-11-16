@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyiron_base
-  version: 0.15.21
+  version: 0.15.22
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pyiron_base-${{ version }}.tar.gz
-  sha256: f543facc22b51b72a37d74a16feb4260e5d163a98f539d808ad7f7d3d0c3e925
+  sha256: f8a0924432b9df41910036cda749ca2b86eb34967af69e02a26f0ff17ccbae32
 
 build:
   number: 0
@@ -52,7 +52,7 @@ requirements:
     - h5io_browser >=0.0.14,<=0.3.1
     - h5py >=3.11.0,<=3.16.0
     - numpy >=1.26.0,<=2.5.3
-    - monty >=2025.1.3,<=2026.2.18
+    - monty >=2025.1.3,<=2026.10.21
     - pandas >=2.0.0,<=3.0.6
     - psutil >=5.9.3,<=7.2.2
     - pyfileindex >=0.2.0,<=0.2.3
